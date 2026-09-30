@@ -1,0 +1,16 @@
+{
+  "_comment": "JS-rendered attendee grid (Luma / Eventbrite / Meetup style). A headless browser loads the page, scrolls to trigger lazy-loading, then each card is parsed with CSS selectors. Needs: pip install playwright && playwright install chromium.",
+  "mode": "render",
+  "url": "https://lu.ma/your-event",
+  "wait_selector": "div.attendee-card",
+  "scroll": true,
+  "scroll_pause": 1.0,
+  "max_scrolls": 40,
+  "item_selector": "div.attendee-card",
+  "fields": {
+    "name":    "div.attendee-card .name",
+    "title":   "div.attendee-card .headline",
+    "avatar":  { "selector": "img", "attr": "src" },
+    "profile": { "selector": "a", "attr": "href" }
+  }
+}

@@ -1,0 +1,13 @@
+# scraped output — personal data, keep out of git
+*.csv
+attendees.csv
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# local configs may contain cookies/tokens — commit only *.example.json
+configs/*.json
+!configs/*.example.json

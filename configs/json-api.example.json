@@ -1,0 +1,23 @@
+{
+  "_comment": "Attendee list served by a backend JSON endpoint (found via browser devtools > Network > XHR). Records live under data.attendees; paginated with ?page=N. Map JSON paths to columns.",
+  "mode": "json",
+  "url": "https://example.com/api/events/123/attendees",
+  "records_path": "data.attendees",
+  "page_param": "page",
+  "page_start": 1,
+  "page_step": 1,
+  "max_pages": 50,
+  "headers": {
+    "Accept": "application/json",
+    "_comment_auth": "If the endpoint needs your session, paste a cookie or bearer token you already have, e.g.:",
+    "Cookie": ""
+  },
+  "delay": 1.0,
+  "fields": {
+    "name":    { "path": "name" },
+    "company": { "path": "company.name" },
+    "title":   { "path": "job_title" },
+    "city":    { "path": "location.city" },
+    "twitter": { "path": "socials[0].handle" }
+  }
+}

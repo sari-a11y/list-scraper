@@ -1,0 +1,12 @@
+{
+  "_comment": "Attendee list rendered as a plain HTML table in the page source. Each <tr> in the table body is one attendee. Use --inspect first to find the right selectors.",
+  "mode": "html",
+  "url": "https://example.com/event/attendees",
+  "item_selector": "table.attendees tbody tr",
+  "fields": {
+    "name":    "td.name",
+    "company": "td.company",
+    "title":   "td.role",
+    "profile": { "selector": "td.name a", "attr": "href" }
+  }
+}
